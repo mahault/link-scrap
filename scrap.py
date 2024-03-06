@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+import os
 import logging
 import pandas as pd
 from linkedin_jobs_scraper import LinkedinScraper
@@ -9,10 +11,12 @@ from linkedin_jobs_scraper.filters import (
     TypeFilters,
 )
 
+load_dotenv()
+
 logging.basicConfig(level=logging.INFO)
 
-JOB_TITLE = "Data Scientist"
-LOCATION = ["London", "United Kingdom"]
+JOB_TITLE = "Director"
+LOCATION = ["Montreal", "United Kingdom"]
 job_postings = []
 
 

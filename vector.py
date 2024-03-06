@@ -1,11 +1,17 @@
 import logging
 import sys
 import os.path
+from dotenv import load_dotenv
+import os
 from llama_index.core import (
     VectorStoreIndex,
     SimpleDirectoryReader,
 )
 import nest_asyncio
+
+load_dotenv()  # This loads the environment variables from .env
+ # Now you can access the OPENAI_API_KEY like any other environment variable
+ openai_api_key = os.getenv('OPENAI_API_KEY')
 
 nest_asyncio.apply()
 
